@@ -1,4 +1,9 @@
 import streamlit as st
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+import seaborn as sns
+import altair as alt
 
 #git add .
 #git commit  -m ""
@@ -6,18 +11,23 @@ import streamlit as st
 #git pull  - to make it up to date
 
 # Importing libraries
-import matplotlib.pyplot as plt
-import numpy as np
-import pandas as pd
-import seaborn as sns
-import altair as alt
+
+##############################################################################################################################################################################################
 
 #To read the csv file
 df = pd.read_csv("datasets/out.csv")
 #st.dataframe(df)
 
+##############################################################################################################################################################################################
+
+st.write("## 1. Legitimacy of a URL that starts with an IP.")
+
+#To know the values when combining label and starts_with_ip data types before creating the Visual.
 urlLegitimacy = df.groupby(['starts_with_ip', 'label']).size().unstack()
 urlLegitimacy
+
+##############################################################################################################################################################################################
+#First graph
 
 def bar_plot_legitimacy_basedOn_IP():
   plt.figure(figsize=(7, 7)) # define the width and height of the graph
@@ -38,5 +48,12 @@ def bar_plot_legitimacy_basedOn_IP():
 
 bar_plot_legitimacy_basedOn_IP()
 
+st.write("## Observations:")
+st.write("""
+- Using the bar graph, we identified that all of the Legitimate sites (1,250,000) do not contain a URL that starts with an IP address. 
+- In contrast, out of the Phishing sites (1,223,282), **26,718** of them start with an IP address in their URL.
+""")
+
+##############################################################################################################################################################################################
 
 
