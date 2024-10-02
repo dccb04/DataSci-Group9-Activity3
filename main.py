@@ -56,4 +56,38 @@ st.write("""
 
 ##############################################################################################################################################################################################
 
+st.write("## 2. The Source of the URL of each and every phishing sites.")
 
+# With the use of 'source and 'label' datatypes. We can know and picturize first what will be the graph be consist of.
+urlLegitimacy = df.groupby(['source', 'label']).size().unstack() 
+urlLegitimacy
+
+def pie_chart_phishing_distribution():
+
+    phishing_df = df[df['label'] == 'phishing'] # Filtering  the Data to include only which are considered as Phishing URLs
+
+    # Count occurrences of each source in the filtered DataFrame
+    source = phishing_df['source'].value_counts()
+
+    # Setting the Color of each pie.
+    colors = ['salmon', 'green', 'yellow'][:len(source)]
+
+    # Create the pie chart with increased .00 decimal places
+    plt.pie(source, labels=source.index, autopct='%.2f%%', colors=colors)
+    plt.title('Source Distribution of Phishing URLs')
+    
+    st.pyplot(plt)
+    plt.clf()
+
+pie_chart_phishing_distribution()
+
+st.write("## Observations on Phishing Sources:")
+st.write("""
+By sorting out the Source of the URL solely based on phishing URLs, we now know that:
+- **93%** (1,116,870) comes from **Phishing.Database**.
+- **6.47%** (80,821) comes from **PhishTank**.
+- **0.04%** (479) comes from **OpenPhish-Community**.
+- **Majestic** and **Cisco-Umbrella** are not included in the chart since both of these sources do not have any Phishing sites.
+""")
+
+##############################################################################################################################################################################################
