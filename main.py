@@ -93,3 +93,28 @@ By sorting out the Source of the URL solely based on phishing URLs, we now know 
 ##############################################################################################################################################################################################
 
 st.write("##5. Legitimacy of a URL that has digits.")
+
+urlLegitimacy = df.groupby(['domain_has_digits', 'label']).size().unstack()
+urlLegitimacy
+
+def bar_plot_legitimacy_digits():
+    plt.figure(figsize=(8, 8)).set_facecolor('lightblue')
+
+    ax = sns.countplot(x='domain_has_digits', hue='label', data=df)
+    plt.title('URLs with Digits in Domain and Legitimacy')
+
+    plt.xlabel('Domain Has Digits')  # label for X-Axis
+    plt.ylabel('Total of URLs')      # label for Y-Axis
+
+    for p in ax.patches:
+        ax.annotate(f'{int(p.get_height())}',
+                    (p.get_x() + p.get_width() / 2., p.get_height()),
+                    ha='center', va='center',
+                    xytext=(0, 10), textcoords='offset points')
+
+    st.pyplot(plt)
+    plt.clf()
+
+bar_plot_legitimacy_digits()
+
+##############################################################################################################################################################################################
