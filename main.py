@@ -19,8 +19,11 @@ df = pd.read_csv("datasets/out.csv")
 #st.dataframe(df)
 
 ##############################################################################################################################################################################################
-st.write("# Dataframe Info")
-st.write(df.info())
+buffer = StringIO()
+df.info(buf=buffer)
+df_info_as_string = buffer.getvalue()
+st.write("Show the relevant information in the dataset such as Data Types")
+st.text(df_info_as_string) # Show the relevant information in the dataset such as Data Types
 
 ##############################################################################################################################################################################################
 st.write("# Dataframe isna().sum()")
@@ -32,7 +35,7 @@ st.write(df.describe()) #This will generate Descriptive Statistics
 
 ##############################################################################################################################################################################################
 
-st.write("## Row Descriptions:")
+st.write("### Row Descriptions:")
 st.write("""
 - `count`: Number of non-null or non-missing values in a column.
 -   `mean`: The calculated mean or average of the column.
@@ -46,7 +49,7 @@ st.write("""
 
 ##############################################################################################################################################################################################
 
-st.write("## Column Descriptions")
+st.write("### Column Descriptions")
 st.write("""
 - `url_length`: URL length in characters.
 - `url_entropy`: Randomness in the URL indicating complexity.
