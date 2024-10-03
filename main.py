@@ -46,6 +46,22 @@ st.write("""
 
 ##############################################################################################################################################################################################
 
+st.write("# Column Descriptions")
+st.write("""
+- `url_length`: URL length in characters.
+- `url_entropy`: Randomness in the URL indicating complexity.
+- `digit_letter_ratio`: Ratio of digits to letters in the URL.
+- `dot_count`: Number of dots in the URL.
+- `at_count`: Number of @ symbols in the URL.
+- `dash_count`: Number of - symbols in the URL.
+- `tld_count`: This defines the count of Top-Level Domains in the URL.
+- `subdomain_count`: This defines the count of subdomains in the URL.
+- `nan_char_entropy`: This defines the non-alphanumeric chars in the URL.
+- `domain_age_days`: Age of domain.
+""")
+
+##############################################################################################################################################################################################
+
 st.write("## 1. Legitimacy of a URL that starts with an IP.")
 
 #To know the values when combining label and starts_with_ip data types before creating the Visual.
