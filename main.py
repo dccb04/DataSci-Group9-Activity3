@@ -15,6 +15,7 @@ from io import StringIO
 
 ##############################################################################################################################################################################################
 
+st.title("Phishing URL Detection")
 st.write("""
 The fraudulent URL Detection dataset classifies URLs as legitimate or fraudulent based on a range of factors that characterize a URL's structure and content. The dataset's phishing identification relies heavily on the length of URLs, the number of unusual characters in them, and domain attributes.
 """)
