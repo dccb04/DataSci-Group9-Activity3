@@ -22,7 +22,7 @@ df = pd.read_csv("datasets/out.csv")
 buffer = StringIO()
 df.info(buf=buffer)
 df_info_as_string = buffer.getvalue()
-st.write("## Show the relevant information in the dataset such as Data Types")
+st.write("## Shows the relevant datatypes in the dataset")
 st.text(df_info_as_string) # Show the relevant information in the dataset such as Data Types
 
 ##############################################################################################################################################################################################
