@@ -20,15 +20,15 @@ df = pd.read_csv("datasets/out.csv")
 
 ##############################################################################################################################################################################################
 
-df.info() #This will show relevant information available in the dataset such as Data Types.
+st.write("df.info()") #This will show relevant information available in the dataset such as Data Types.
 
 ##############################################################################################################################################################################################
 
-df.isna().sum() #Show the null values of each data types.
+st.write("df.isna().sum()") #Show the null values of each data types.
 
 ##############################################################################################################################################################################################
 
-df.describe() #This will generate Descriptive Statistics
+st.write("df.describe()") #This will generate Descriptive Statistics
 
 ##############################################################################################################################################################################################
 
