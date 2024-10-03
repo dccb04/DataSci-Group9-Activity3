@@ -215,15 +215,15 @@ df.columns = df.columns.str.strip()  # Remove leading/trailing spaces from colum
 print("Columns in the dataset:", df.columns)  # Print column names
 
 # Check if 'Base URL' exists before calculating lengths
-if 'Base URL' in df.columns:
+if 'url' in df.columns:
     # Calculate the length of each URL and add it as a new column
-    df['url_length'] = df['Base URL'].apply(len)
+    df['url_length'] = df['url'].apply(len)
 
     # Create a bar chart for URL lengths
     plt.figure(figsize=(10, 6))
-    plt.bar(df['Base URL'], df['url_length'], color='skyblue')
+    plt.bar(df['url'], df['url_length'], color='skyblue')
     plt.title('URL Length in Characters')
-    plt.xlabel('Base URL')
+    plt.xlabel('url')
     plt.ylabel('Length (Characters)')
     plt.xticks(rotation=45)
     plt.tight_layout()  # Adjusts plot to ensure everything fits without overlap
