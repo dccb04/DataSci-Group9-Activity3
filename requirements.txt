@@ -7,3 +7,5 @@ altair
 squarify
 networkx
 plotly
+WordCloud
+Axes3D
