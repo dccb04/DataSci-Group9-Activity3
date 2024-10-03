@@ -19,20 +19,20 @@ df = pd.read_csv("datasets/out.csv")
 #st.dataframe(df)
 
 ##############################################################################################################################################################################################
-st.write("Dataframe Info")
+st.write("# Dataframe Info")
 st.write(df.info())
 
 ##############################################################################################################################################################################################
-st.write("Dataframe isna().sum()")
+st.write("# Dataframe isna().sum()")
 st.write(df.isna().sum()) #Show the null values of each data types.
 
 ##############################################################################################################################################################################################
-st.write("Dataframe describe")
+st.write("# Dataframe describe")
 st.write(df.describe()) #This will generate Descriptive Statistics
 
 ##############################################################################################################################################################################################
 
-st.write("# Row Descriptions:")
+st.write("## Row Descriptions:")
 st.write("""
 - `count`: Number of non-null or non-missing values in a column.
 -   `mean`: The calculated mean or average of the column.
@@ -46,7 +46,7 @@ st.write("""
 
 ##############################################################################################################################################################################################
 
-st.write("# Column Descriptions")
+st.write("## Column Descriptions")
 st.write("""
 - `url_length`: URL length in characters.
 - `url_entropy`: Randomness in the URL indicating complexity.
