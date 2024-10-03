@@ -168,7 +168,7 @@ st.write("## 7. Category of URLs either phishing or legitimate.")
 def pie_chart_url_distribution():
     # Load the dataset from 'out.csv'
     try:
-        df = pd.read_csv('out.csv')  # Ensure 'out.csv' is in the correct directory or provide full path
+        df = pd.read_csv('datasets/out.csv')  # Ensure 'out.csv' is in the correct directory or provide full path
 
         # Ensure the 'label' column exists
         if 'label' not in df.columns:
