@@ -91,3 +91,5 @@ By sorting out the Source of the URL solely based on phishing URLs, we now know 
 """)
 
 ##############################################################################################################################################################################################
+
+st.write("##5. Legitimacy of a URL that has digits.")
