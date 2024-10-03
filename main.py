@@ -114,7 +114,8 @@ def pie_chart_Legitimacy_with_punycode():
     plt.gcf().set_facecolor('lightgreen')
 
     plt.title('Legitimate URLs with punycode')
-    plt.show()
+    st.pyplot(plt)
+    plt.clf()
 
 # Call the function
 pie_chart_Legitimacy_with_punycode()
@@ -142,7 +143,8 @@ def bar_plot_legitimacy_has_punycode():
   for p in ax.patches:
     ax.annotate(f'{p.get_height()}', (p.get_x() + p.get_width() / 2., p.get_height()), ha='center', va='center', xytext=(0, 10), textcoords='offset points')
 
-  plt.show()
+  st.pyplot(plt)
+    plt.clf()
 
 bar_plot_legitimacy_has_punycode()
 
