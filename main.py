@@ -20,16 +20,16 @@ df = pd.read_csv("datasets/out.csv")
 
 ##############################################################################################################################################################################################
 
-df.info() #This will show relevant information available in the dataset such as Data Types.
-
+info = df.info() #This will show relevant information available in the dataset such as Data Types.
+info
 ##############################################################################################################################################################################################
 
-df.isna().sum() #Show the null values of each data types.
-
+sum = df.isna().sum() #Show the null values of each data types.
+sum
 ##############################################################################################################################################################################################
 
-df.describe() #This will generate Descriptive Statistics
-
+describe = df.describe() #This will generate Descriptive Statistics
+describe
 ##############################################################################################################################################################################################
 
 st.write("# Row Descriptions:")
