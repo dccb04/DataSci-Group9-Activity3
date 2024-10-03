@@ -24,15 +24,17 @@ buffer = StringIO()
 df.info(buf=buffer)
 df_info_as_string = buffer.getvalue()
 st.write("Show the relevant information in the dataset such as Data Types")
-st.write(df_info_as_string) # Show the relevant information in the dataset such as Data Types
+st.text(df_info_as_string) # Show the relevant information in the dataset such as Data Types
 
 ##############################################################################################################################################################################################
+#Show the null values of each data types.
 st.write("# Show the null values.")
-st.write(df.isna().sum()) #Show the null values of each data types.
+st.write(df.isna().sum()) 
 
 ##############################################################################################################################################################################################
+#This will generate Descriptive Statistics
 st.write("# Generate descriptive Statistics")
-st.write(df.describe()) #This will generate Descriptive Statistics
+st.write(df.describe()) 
 
 ##############################################################################################################################################################################################
 
