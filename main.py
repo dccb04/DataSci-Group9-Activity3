@@ -26,7 +26,6 @@ st.write("## 1. Legitimacy of a URL that starts with an IP.")
 urlLegitimacy = df.groupby(['starts_with_ip', 'label']).size().unstack()
 urlLegitimacy
 
-##############################################################################################################################################################################################
 #First graph
 
 def bar_plot_legitimacy_basedOn_IP():
@@ -55,6 +54,7 @@ st.write("""
 """)
 
 ##############################################################################################################################################################################################
+#Second graph
 
 st.write("## 2. The Source of the URL of each and every phishing sites.")
 
