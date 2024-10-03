@@ -207,6 +207,7 @@ st.write("## 8. Length of URLs in Characters.")
 ###################################################################################################################################################################################################################
 # Load the data from the CSV file
 df = pd.read_csv('datasets/out.csv', encoding='utf-8')  # Adjust encoding if necessary
+
 # Clean column names
 df.columns = df.columns.str.strip()  # Remove leading/trailing spaces from column names
 
@@ -228,7 +229,7 @@ if 'Base URL' in df.columns:
     plt.tight_layout()  # Adjusts plot to ensure everything fits without overlap
 
     # Show the plot
-    
+    plt.show()
     st.pyplot(plt)
     plt.clf()
 else:
