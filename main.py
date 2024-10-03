@@ -153,7 +153,7 @@ def pie_chart_url_distribution():
     # Create the pie chart with percentage labels
     plt.pie(label_counts, labels=label_counts.index, autopct='%.2f%%', colors=colors)
     plt.title('Distribution of Phishing vs Legitimate URLs')
-    plt.show()
+    
 
     st.pyplot(plt)
     plt.clf()
@@ -165,7 +165,7 @@ pie_chart_url_distribution()
 st.write("## 8. Length of URLs in Characters.")
 ###################################################################################################################################################################################################################
 # Load the data from the CSV file
-df = pd.read_csv('out.csv', encoding='utf-8')  # Adjust encoding if necessary
+df = pd.read_csv('datasets/out.csv', encoding='utf-8')  # Adjust encoding if necessary
 # Clean column names
 df.columns = df.columns.str.strip()  # Remove leading/trailing spaces from column names
 
@@ -187,7 +187,7 @@ if 'Base URL' in df.columns:
     plt.tight_layout()  # Adjusts plot to ensure everything fits without overlap
 
     # Show the plot
-    plt.show()
+    
     st.pyplot(plt)
     plt.clf()
 else:
