@@ -318,8 +318,8 @@ def pie_chart_url_distribution():
 # Call the function to display the pie chart
 pie_chart_url_distribution()
 st.write("## Observations:")
-st.write("""-According to the results of the Pie Chart for Category of URLs if either phishing or legitimate, it gave us a balanced outcome where the both percentage was 50%.
-            -Although all URLs are not noticeable for phishing the chart represents equal findings for both.""")
+st.write("""- According to the results of the Pie Chart for Category of URLs if either phishing or legitimate, it gave us a balanced outcome where the both percentage was 50%.
+            - Although all URLs are not noticeable for phishing the chart represents equal findings for both.""")
 ###################################################################################################################################################################################################################
 ##8th Graph 
 st.write("## 8. Length of URLs in Characters.")
