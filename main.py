@@ -122,6 +122,13 @@ def bar_plot_legitimacy_digits():
 
 bar_plot_legitimacy_digits()
 
+st.write("## Observations:")
+st.write("""
+- With 1,250,000 valid cases compared to 1,190,642 phishing ones, the graphic shows that domains without digits are primarily related with legitimate URLs. This suggests that both types of URLs frequently avoid using numbers to appear trustworthy.
+- On the other hand, 59,358 occurrences of domains with digits are exclusively associated with phishing, none of which are authentic. This indicates that the presence of digits is a strong indicator of phishing activity.
+- This distinction emphasizes how crucial it is to use domain features as a vital element in phishing detection, such as digit presence.
+""")
+
 ##############################################################################################################################################################################################
 
 st.write("## 6. Legitimacy of a URL that has internal links.")
@@ -147,6 +154,11 @@ def pie_chart_phishing_distribution_based_on_internal_links():
     plt.clf()
 
 pie_chart_phishing_distribution_based_on_internal_links()
+
+st.write("## Observations:")
+st.write("""
+- According to the pie chart, a significant 95.25% of phishing URLs have no internal links, indicating that the majority of phishing sites do not use the internal navigation that is common on trustworthy websites.
+""")
 
 ##############################################################################################################################################################################################
 ##7th Graph 
