@@ -20,6 +20,32 @@ df = pd.read_csv("datasets/out.csv")
 
 ##############################################################################################################################################################################################
 
+df.info() #This will show relevant information available in the dataset such as Data Types.
+
+##############################################################################################################################################################################################
+
+df.isna().sum() #Show the null values of each data types.
+
+##############################################################################################################################################################################################
+
+df.describe() #This will generate Descriptive Statistics
+
+##############################################################################################################################################################################################
+
+st.write("# Row Descriptions:")
+st.write("""
+- `count`: Number of non-null or non-missing values in a column.
+- `mean`: The calculated mean or average of the column.
+- `std (Standard Deviation)`: Values in this row shows how much the values in their respective columns deviate from the mean (average value).
+- `min`: Smallest (minimum) number in the column.
+- `25% (1st Quartile)`: The data points in this row implies that 25% of it are less than our equal.
+- `50% (Median)`: This is the 50th percentile. The values represented in this row are below (<) its value and half (50%) are above (>).
+- `75% (3rd Quartile)`: This is the 75th percentile. The values represented in this row are less than or equal (<=) to its value.
+- `max`: Largest (maximum) number in the column.
+""")
+
+##############################################################################################################################################################################################
+
 st.write("## 1. Legitimacy of a URL that starts with an IP.")
 
 #To know the values when combining label and starts_with_ip data types before creating the Visual.
