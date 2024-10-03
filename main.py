@@ -35,7 +35,7 @@ st.write("df.describe()") #This will generate Descriptive Statistics
 st.write("# Row Descriptions:")
 st.write("""
 - `count`: Number of non-null or non-missing values in a column.
-- `mean`: The calculated mean or average of the column.
+-   `mean`: The calculated mean or average of the column.
 - `std (Standard Deviation)`: Values in this row shows how much the values in their respective columns deviate from the mean (average value).
 - `min`: Smallest (minimum) number in the column.
 - `25% (1st Quartile)`: The data points in this row implies that 25% of it are less than our equal.
@@ -185,8 +185,8 @@ def bar_plot_legitimacy_has_punycode():
   for p in ax.patches:
     ax.annotate(f'{p.get_height()}', (p.get_x() + p.get_width() / 2., p.get_height()), ha='center', va='center', xytext=(0, 10), textcoords='offset points')
 
-  st.pyplot(plt)
-    plt.clf()
+st.pyplot(plt)
+plt.clf()
 
 bar_plot_legitimacy_has_punycode()
 
