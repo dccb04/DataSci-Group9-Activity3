@@ -20,16 +20,16 @@ df = pd.read_csv("datasets/out.csv")
 
 ##############################################################################################################################################################################################
 
-info = df.info() #This will show relevant information available in the dataset such as Data Types.
-info
+st.write("df.info()") #This will show relevant information available in the dataset such as Data Types.
+
 ##############################################################################################################################################################################################
 
-sum = df.isna().sum() #Show the null values of each data types.
-sum
+st.write("df.isna().sum()") #Show the null values of each data types.
+
 ##############################################################################################################################################################################################
 
-describe = df.describe() #This will generate Descriptive Statistics
-describe
+st.write("df.describe()") #This will generate Descriptive Statistics
+
 ##############################################################################################################################################################################################
 
 st.write("# Row Descriptions:")
@@ -186,7 +186,7 @@ def bar_plot_legitimacy_has_punycode():
     ax.annotate(f'{p.get_height()}', (p.get_x() + p.get_width() / 2., p.get_height()), ha='center', va='center', xytext=(0, 10), textcoords='offset points')
 
   st.pyplot(plt)
-  plt.clf()
+    plt.clf()
 
 bar_plot_legitimacy_has_punycode()
 
