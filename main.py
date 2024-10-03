@@ -206,7 +206,7 @@ pie_chart_url_distribution()
 st.write("## 8. Length of URLs in Characters.")
 ###################################################################################################################################################################################################################
 # Load the data from the CSV file
-df = pd.read_csv('datasets/out.csv', encoding='utf-8')  # Adjust encoding if necessary
+df = pd.read_csv('datasets/out.csv')  # Adjust encoding if necessary
 
 # Clean column names
 df.columns = df.columns.str.strip()  # Remove leading/trailing spaces from column names
