@@ -20,15 +20,16 @@ df = pd.read_csv("datasets/out.csv")
 
 ##############################################################################################################################################################################################
 
-st.write("df.info()") #This will show relevant information available in the dataset such as Data Types.
+urlLegitimacy = df.groupby(['source', 'label']).size().unstack() 
+urlLegitimacy #This will show relevant information available in the dataset such as Data Types.
 
 ##############################################################################################################################################################################################
 
-st.write("df.isna().sum()") #Show the null values of each data types.
+df.isna().sum() #Show the null values of each data types.
 
 ##############################################################################################################################################################################################
 
-st.write("df.describe()") #This will generate Descriptive Statistics
+df.describe() #This will generate Descriptive Statistics
 
 ##############################################################################################################################################################################################
 
