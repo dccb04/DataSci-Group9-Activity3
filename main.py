@@ -15,6 +15,14 @@ from io import StringIO
 
 ##############################################################################################################################################################################################
 
+st.write("""
+The fraudulent URL Detection dataset classifies URLs as legitimate or fraudulent based on a range of factors that characterize a URL's structure and content. The dataset's phishing identification relies heavily on the length of URLs, the number of unusual characters in them, and domain attributes.
+""")
+
+st.write("Dataset: [Phishing URL Detection](https://www.kaggle.com/datasets/sergioagudelo/phishing-url-detection)")
+
+##############################################################################################################################################################################################
+
 #To read the csv file
 df = pd.read_csv("datasets/out.csv")
 
@@ -40,7 +48,7 @@ st.write(df.describe())
 st.write("### Row Descriptions:")
 st.write("""
 - `count`: Number of non-null or non-missing values in a column.
--   `mean`: The calculated mean or average of the column.
+- `mean`: The calculated mean or average of the column.
 - `std (Standard Deviation)`: Values in this row shows how much the values in their respective columns deviate from the mean (average value).
 - `min`: Smallest (minimum) number in the column.
 - `25% (1st Quartile)`: The data points in this row implies that 25% of it are less than our equal.
