@@ -101,58 +101,12 @@ By sorting out the Source of the URL solely based on phishing URLs, we now know 
 #Third Graph
 st.write("## 3. Legitimate URLs that has a punycode")
 
-urlLegitimacy = df.groupby(['label', 'has_punycode']).size().unstack()
-urlLegitimacy
-
-
-def pie_chart_Legitimacy_with_punycode():
-
-    legitimacy_df = df[df['label'] == 'legitimate'] # Filters through the data to find the specific data needed
-
-    # Check the occurances
-    has_punycode = legitimacy_df['has_punycode'].value_counts()
-
-    #  Color of the pies.
-    colors = ['red', 'blue', 'green'][:len(has_punycode)]
-
-    # Create the pie
-    plt.pie(has_punycode, labels=has_punycode.index, autopct='%.2f%%', colors=colors)
-    plt.gcf().set_facecolor('lightgreen')
-
-    plt.title('Legitimate URLs with punycode')
-    st.pyplot(plt)
-    plt.clf()
-
-# Call the function
-pie_chart_Legitimacy_with_punycode()
-
 st.write("## Observations")
 st.write("By sorting out the data the pie chart shows that majority of legitimate URLs or 99.88% to be exact actually has no punycode, while the other 0.12% does.")
 ##############################################################################################################################################################################################
 #Fourth Graph
 st.write("## 4. URLs with has_punycode")
-urlLegitimacy = df.groupby(['label', 'has_punycode']).size().unstack()
-urlLegitimacy
 
-def bar_plot_legitimacy_has_punycode():
-
-  plt.figure(figsize=(8, 8)).set_facecolor('lightblue') # define size of the graph
-
-  ax = sns.countplot(x='label', hue='has_punycode', data=df)
-  plt.title('URLs that has a punycode graph')
-
-  plt.xlabel('Legitimacy of URLs')  # label for X-Axis
-  plt.ylabel('Total of URLs')       # label for Y-Axis
-
-
-  # shows the count of the graphs
-  for p in ax.patches:
-    ax.annotate(f'{p.get_height()}', (p.get_x() + p.get_width() / 2., p.get_height()), ha='center', va='center', xytext=(0, 10), textcoords='offset points')
-
-  st.pyplot(plt)
-  plt.clf()
-
-bar_plot_legitimacy_has_punycode()
 
 st.write("## Observations")
 st.write("With the use of a bar graph we have noticed that a small number of legitimate and phishing URLs use a puny code. This means that majority of URLs though used but it is rare.")
@@ -160,9 +114,6 @@ st.write("With the use of a bar graph we have noticed that a small number of leg
 ##############################################################################################################################################################################################
 
 st.write("## 5. Legitimacy of a URL that has digits.")
-
-urlLegitimacy = df.groupby(['domain_has_digits', 'label']).size().unstack()
-urlLegitimacy
 
 ##############################################################################################################################################################################################
 #Fifth Graph
