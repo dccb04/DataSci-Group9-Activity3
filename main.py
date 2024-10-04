@@ -167,27 +167,8 @@ urlLegitimacy
 ##############################################################################################################################################################################################
 #Fifth Graph
 
-def bar_plot_legitimacy_digits():
-    # Create a figure for the plot with a size of 8x8 inches, and set the background color to light blue.
-    plt.figure(figsize=(8, 8)).set_facecolor('lightblue')
-
-    # Use seaborn's countplot to create a bar plot.
-    ax = sns.countplot(x='domain_has_digits', hue='label', data=df)
-    plt.title('URLs with Digits in Domain and Legitimacy')
-
-    plt.xlabel('Domain Has Digits')  # Label for the X-axis indicating whether the domain has digits.
-    plt.ylabel('Total of URLs')      # Label for the Y-axis representing the total number of URLs.
-
-    for p in ax.patches:
-        ax.annotate(f'{int(p.get_height())}',
-                    (p.get_x() + p.get_width() / 2., p.get_height()),
-                    ha='center', va='center',
-                    xytext=(0, 10), textcoords='offset points')
-
-    st.pyplot(plt)
-    plt.clf()
-
-bar_plot_legitimacy_digits()
+image5 = Image.open('assets/FifthGraph.png')
+st.image(image5)
 
 st.write("## Observations:")
 st.write("""
@@ -200,27 +181,11 @@ st.write("""
 
 st.write("## 6. Legitimacy of a URL that has internal links.")
 
-urlLegitimacy = df.groupby(['has_internal_links', 'label']).size().unstack()
-urlLegitimacy
-
 ##############################################################################################################################################################################################
 #Sixth Graph
 
-def pie_chart_phishing_distribution_based_on_internal_links():
-    # Filter the dataset for phishing URLs 
-    phishing_distribution = df[df['label'] == 'phishing'].groupby('has_internal_links').size()
-
-    # Color of each pie section
-    colors = ['#A3CFF9', '#F88C96'][:len(phishing_distribution)]
-
-    # Create a pie chart using the phishing distribution data.
-    # The labels are mapped based on the 'has_internal_links' column (True or False).
-    plt.pie(phishing_distribution, labels=phishing_distribution.index.map({True: 'Has Internal Links', False: 'No Internal Links'}), autopct='%.2f%%', colors=colors)
-    plt.title('Source Distribution of Phishing URLs Based on Internal Links')
-    st.pyplot(plt)
-    plt.clf()
-
-pie_chart_phishing_distribution_based_on_internal_links()
+image6 = Image.open('assets/SixthGraph.png')
+st.image(image6)
 
 st.write("## Observations:")
 st.write("""
