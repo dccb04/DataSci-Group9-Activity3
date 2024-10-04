@@ -324,39 +324,5 @@ st.write("""
 - Although all URLs are not noticeable for phishing the chart represents equal findings for both.
 """)
 ###################################################################################################################################################################################################################
-##8th Graph 
 
-st.write("## 8. Length of URLs in Characters.")
-###################################################################################################################################################################################################################
-# Load the data from the CSV file
-df = pd.read_csv('datasets/out.csv')  # Adjust encoding if necessary
-
-# Clean column names
-df.columns = df.columns.str.strip()  # Remove leading/trailing spaces from column names
-
-# Debugging output to check column names
-print("Columns in the dataset:", df.columns)  # Print column names
-
-# Check if 'Base URL' exists before calculating lengths
-if 'Base URL' in df.columns:
-    # Calculate the length of each URL and add it as a new column
-    df['url_length'] = df['Base URL'].apply(len)
-
-    # Create a bar chart for URL lengths
-    plt.figure(figsize=(10, 6))
-    plt.bar(df['Base URL'], df['url_length'], color='skyblue')
-    plt.title('URL Length in Characters')
-    plt.xlabel('Base URL')
-    plt.ylabel('Length (Characters)')
-    plt.xticks(rotation=45)
-    plt.tight_layout()  # Adjusts plot to ensure everything fits without overlap
-
-    # Show the plot
-    plt.show()
-    st.pyplot(plt)
-    plt.clf()
-else:
-    print("The required column 'Base URL' is not found in the dataset.")
-    
-###################################################################################################################################################################################################################
 
