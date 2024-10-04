@@ -84,7 +84,7 @@ st.write("""
 
 st.write("## 2. The Source of the URL of each and every phishing sites.")
 
-image2 = Image.open('assets/Second Graph.png')
+image2 = Image.open('assets/SecondGraph.png')
 st.image(image2)
 
 st.write("## Observations on Phishing Sources:")
@@ -101,12 +101,17 @@ By sorting out the Source of the URL solely based on phishing URLs, we now know 
 #Third Graph
 st.write("## 3. Legitimate URLs that has a punycode")
 
+image3 = Image.open('assets/ThirdGraph.png')
+st.image(image3)
+
 st.write("## Observations")
 st.write("By sorting out the data the pie chart shows that majority of legitimate URLs or 99.88% to be exact actually has no punycode, while the other 0.12% does.")
 ##############################################################################################################################################################################################
 #Fourth Graph
 st.write("## 4. URLs with has_punycode")
 
+image4 = Image.open('assets/FourthGraph.png')
+st.image(image4)
 
 st.write("## Observations")
 st.write("With the use of a bar graph we have noticed that a small number of legitimate and phishing URLs use a puny code. This means that majority of URLs though used but it is rare.")
@@ -143,6 +148,9 @@ st.write("""
 ##############################################################################################################################################################################################
 ##7th Graph 
 st.write("## 7. Category of URLs either phishing or legitimate.")
+
+image7 = Image.open('assets/SeventhGraph.png')
+st.image(image7)
 
 st.write("## Observations:")
 st.write("""
