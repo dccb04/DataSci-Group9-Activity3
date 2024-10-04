@@ -9,5 +9,4 @@ networkx
 plotly
 WordCloud
 Axes3D
-StringIO
 Image
