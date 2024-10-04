@@ -8,5 +8,4 @@ squarify
 networkx
 plotly
 WordCloud
-Axes3D
 Image
