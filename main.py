@@ -129,11 +129,8 @@ st.write("""
 """)
 
 ##############################################################################################################################################################################################
-
-st.write("## 6. Legitimacy of a URL that has internal links.")
-
-##############################################################################################################################################################################################
 #Sixth Graph
+st.write("## 6. Legitimacy of a URL that has internal links.")
 
 image6 = Image.open('assets/SixthGraph.png')
 st.image(image6)
@@ -146,44 +143,7 @@ st.write("""
 ##############################################################################################################################################################################################
 ##7th Graph 
 st.write("## 7. Category of URLs either phishing or legitimate.")
-##############################################################################################################################################################################################
 
-def pie_chart_url_distribution():
-    # Load the dataset from 'out.csv'
-    try:
-        df = pd.read_csv('datasets/out.csv')  # Ensure 'out.csv' is in the correct directory or provide full path
-
-        # Ensure the 'label' column exists
-        if 'label' not in df.columns:
-            print("Error: 'label' column not found in the CSV file.")
-            return
-
-    except FileNotFoundError:
-        print("Error: 'out.csv' file not found.")
-        return
-    except pd.errors.ParserError as e:
-        print(f"Error parsing the CSV file: {e}")
-        return
-    except Exception as e:
-        print(f"An unexpected error occurred: {e}")
-        return
-
-    # Count occurrences of each label ('phishing' and 'legitimate')
-    label_counts = df['label'].value_counts()
-
-    # Define colors for each category (Phishing and Legitimate)
-    colors = ['salmon', 'lightgreen']  # Phishing: salmon, Legitimate: lightgreen
-
-    # Create the pie chart with percentage labels
-    plt.pie(label_counts, labels=label_counts.index, autopct='%.2f%%', colors=colors)
-    plt.title('Distribution of Phishing vs Legitimate URLs')
-    
-
-    st.pyplot(plt)
-    plt.clf()
-
-# Call the function to display the pie chart
-pie_chart_url_distribution()
 st.write("## Observations:")
 st.write("""
 - According to the results of the Pie Chart for Category of URLs if either phishing or legitimate, it gave us a balanced outcome where the both percentage was 50%.
