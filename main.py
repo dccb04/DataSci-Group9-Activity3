@@ -176,6 +176,14 @@ st.write("""
 - Although all URLs are not noticeable for phishing the chart represents equal findings for both.
 """)
 ###################################################################################################################################################################################################################
-
 #8th graph
+st.write("## 8. URL length in characters.")
+
+image8 = Image.open('assets/EighthGraph.png')
+st.image(image8)
+
+st.write("## Observations:")
+st.write("""
+- As for the results of the URLS length in characters the URLS "Sub.another.example.org" has the most numbers and while the URLS"example.com" are the URLs that has the same number counts.
+""")
 
