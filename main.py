@@ -67,8 +67,11 @@ st.write("""
 """)
 
 ##############################################################################################################################################################################################
-
+#First Graph
 st.write("## 1. Legitimacy of a URL that starts with an IP.")
+
+imageurl1 = Image.open('assets/FirstUrl.png')
+st.image(imageurl1)
 
 image1 = Image.open('assets/FirstGraph.png')
 st.image(image1)
@@ -81,8 +84,10 @@ st.write("""
 
 ##############################################################################################################################################################################################
 #Second graph
-
 st.write("## 2. The Source of the URL of each and every phishing sites.")
+
+imageurl2 = Image.open('assets/SecondUrl.png')
+st.image(imageurl2)
 
 image2 = Image.open('assets/SecondGraph.png')
 st.image(image2)
@@ -101,6 +106,9 @@ By sorting out the Source of the URL solely based on phishing URLs, we now know 
 #Third Graph
 st.write("## 3. Legitimate URLs that has a punycode")
 
+imageurl3 = Image.open('assets/ThirdUrl.png')
+st.image(imageurl3)
+
 image3 = Image.open('assets/ThirdGraph.png')
 st.image(image3)
 
@@ -110,6 +118,9 @@ st.write("By sorting out the data the pie chart shows that majority of legitimat
 #Fourth Graph
 st.write("## 4. URLs with has_punycode")
 
+imageurl4 = Image.open('assets/FourthUrl.png')
+st.image(imageurl4)
+
 image4 = Image.open('assets/FourthGraph.png')
 st.image(image4)
 
@@ -117,11 +128,11 @@ st.write("## Observations")
 st.write("With the use of a bar graph we have noticed that a small number of legitimate and phishing URLs use a puny code. This means that majority of URLs though used but it is rare.")
 
 ##############################################################################################################################################################################################
-
+#Fifth Graph
 st.write("## 5. Legitimacy of a URL that has digits.")
 
-##############################################################################################################################################################################################
-#Fifth Graph
+imageurl5 = Image.open('assets/FifthUrl.png')
+st.image(imageurl5)
 
 image5 = Image.open('assets/FifthGraph.png')
 st.image(image5)
@@ -137,6 +148,9 @@ st.write("""
 #Sixth Graph
 st.write("## 6. Legitimacy of a URL that has internal links.")
 
+imageurl6 = Image.open('assets/SixthUrl.png')
+st.image(imageurl6)
+
 image6 = Image.open('assets/SixthGraph.png')
 st.image(image6)
 
@@ -146,7 +160,7 @@ st.write("""
 """)
 
 ##############################################################################################################################################################################################
-##7th Graph 
+#7th Graph 
 st.write("## 7. Category of URLs either phishing or legitimate.")
 
 image7 = Image.open('assets/SeventhGraph.png')
