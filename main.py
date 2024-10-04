@@ -44,7 +44,7 @@ st.image(imageNull)
 #This will generate Descriptive Statistics
 st.write("## df.describe()")
 st.write("""
-- This will generate Descriptive Statistics
+This will generate Descriptive Statistics
 """)
 describe = Image.open('assets/describe.png')
 st.image(describe)
