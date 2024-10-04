@@ -24,19 +24,28 @@ st.write("Dataset: [Phishing URL Detection](https://www.kaggle.com/datasets/serg
 
 ##############################################################################################################################################################################################
 #This will show relevant information available in the dataset such as Data Types.
-st.write("## df.info() - This will show relevant information available in the dataset such as Data Types.")
+st.write("## df.info()")
+st.write("""
+This will show relevant information available in the dataset such as Data Types.
+""")
 imageInfo = Image.open('assets/info.png')
 st.image(imageInfo)
 
 ##############################################################################################################################################################################################
 #Show the null values of each data types.
-st.write("## df.isna().sum() - Show the null values of each data types.")
+st.write("## df.isna().sum()")
+st.write("""
+Show the null values of each data types.
+""")
 imageNull = Image.open('assets/nullValues.png')
 st.image(imageNull)
 
 ##############################################################################################################################################################################################
 #This will generate Descriptive Statistics
-st.write("## df.describe() - This will generate Descriptive Statistics")
+st.write("## df.describe()")
+st.write("""
+- This will generate Descriptive Statistics
+""")
 describe = Image.open('assets/describe.png')
 st.image(describe)
 
